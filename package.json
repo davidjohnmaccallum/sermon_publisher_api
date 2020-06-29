@@ -1,0 +1,35 @@
+{
+  "name": "sermon_publish_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-debug": "export NETWORK_COST_PER_GB_USD='0.12'; export GOOGLE_APPLICATION_CREDENTIALS='./google-services.json'; export DEBUG='sermon-publish-api:*'; npm run start",
+    "start": "node ./bin/www",
+    "hot-debug": "export NETWORK_COST_PER_GB_USD='0.12'; export GOOGLE_APPLICATION_CREDENTIALS='./google-services.json'; export DEBUG='sermon-publish-api:*'; npm run hot",
+    "hot": "nodemon --inspect ./bin/www"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "10"
+  },
+  "dependencies": {
+    "@google-cloud/monitoring": "2.0.0",
+    "@google-cloud/storage": "5.1.1",
+    "express": "4.17.1",
+    "firebase-admin": "8.10.0",
+    "getenv": "1.0.0",
+    "moment-timezone": "0.5.31",
+    "node-fetch": "2.6.0",
+    "pretty-bytes": "5.3.0"
+  },
+  "devDependencies": {
+    "eslint": "5.12.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-plugin-promise": "4.0.1",
+    "nodemon": "2.0.4",
+    "prettier": "2.0.5"
+  }
+}
